@@ -107,6 +107,7 @@ int CodepointToUTF8(unsigned int codepoint, unsigned char *output) {
     return 0;
 }
 
+
 void PrintCodepointChar(int codepoint) {
     unsigned char encodedChar[5];   // a Unicode character doesn't take more than 4 bytes, the 5th byte is for the null terminator
 
@@ -115,6 +116,7 @@ void PrintCodepointChar(int codepoint) {
     encodedChar[len] = '\0';
     printf("%s\n", encodedChar);
 }
+
 
 void PrintCodepointCombiningChar(int codepointBase, int codepointComb) {
     unsigned char encodedChars[9];
