@@ -120,6 +120,7 @@ void PrintCodepointChar(int codepoint) {
 
 void PrintCodepointCombiningChar(int codepointBase, int codepointComb) {
     unsigned char encodedChars[9];
+
     unsigned char* p = encodedChars;
     p += CodepointToUTF8(codepointBase, encodedChars);
     p += CodepointToUTF8(codepointComb, p);
